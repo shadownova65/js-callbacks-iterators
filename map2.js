@@ -26,8 +26,16 @@ var phoneBook = [
    {Yam: "555-555-5555"},
    {Zed: "111-111-1111"}
   ];
-
+// var a = phoneBook[0];
+// console.log(Object.keys(a)[0]);
+// console.log(Object.values(a)[0]);
 // Take the phonebook above and use map to return a new phonebook that includes a country-code that matches the rest of the phone number.
 // For example, the 0th element of the new array should be {Abe: "1-111-111-1111"}
 
 //Your code here
+var newPhoneBook = phoneBook.map(function(obj) {
+  var key = Object.keys(obj)[0];
+  var value = (Object.values(obj)[0][0] + "-").concat(Object.values(obj)[0]);
+  return {[key]:value};
+});
+console.log(newPhoneBook);

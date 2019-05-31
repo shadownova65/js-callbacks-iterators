@@ -11,4 +11,6 @@
 ];
 
 // your code here
-
+foods.forEach(function(obj) {
+  console.log(obj.name + ' is ' + obj.level + ' delicious');
+})
